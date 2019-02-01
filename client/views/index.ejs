@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login/Registration</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Welcome to my site!</h2>
+    <% if (loggedout) { %>
+    <h4 class="successText"><%= loggedout %></h4>
+    <% } %>
+    <div class="wrapper">
+      <form action="/login" method="POST">
+        <input type="text" name="email" placeholder="email" />
+        <input type="password" name="password" placeholder="password" />
+        <button type="submit">Login</button>
+        <% if (error) { %>
+        <p class="errorText"><%= error %></p>
+        <% } %>
+      </form>
+      <form action="/register" method="POST">
+        <input type="text" name="firstName" placeholder="First name" />
+        <input type="text" name="lastName" placeholder="Last name" />
+        <input type="text" name="email" placeholder="email" />
+        <input type="password" name="password" placeholder="Enter a password" />
+        <input
+          type="password"
+          name="password2"
+          placeholder="Confirm your password"
+        />
+        <button type="submit">Register</button>
+        <% if(messages.registration) { %> <% for (var x of
+        messages.registration) { %>
+        <p class="errorText"><%= x %></p>
+        <% } %> <% } %>
+      </form>
+    </div>
+  </body>
+</html>

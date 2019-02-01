@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: rgb(238, 238, 238);
+}
+
+h2 {
+    width: fit-content;
+    margin: auto;
+    padding-top: 50px;
+    font-size: 28pt;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 100px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 6px rgb(66, 66, 66);
+    margin: 10px;
+    width: fit-content;
+}
+
+input, button, .btn {
+    padding: 5px 10px;
+    color: rgb(45, 144, 42);
+    font-size: 14pt;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    margin-top: 5px;
+}
+
+input {
+    border-bottom: 1px solid black;
+}
+
+button, .btn {
+    background: rgb(36, 36, 143);
+    color: white;
+    margin-top: 10px;
+    box-shadow: 3px 3px 9px rgb(26, 26, 26);
+    transition: all 250ms ease;
+}
+
+button:active, .btn:active {
+    background: rgb(22, 22, 90);
+    color: rgb(214, 214, 214);
+    box-shadow: none;
+}
+
+.errorText {
+    color: red;
+    font-size: 14pt;
+}
+
+.successText {
+    color: green;
+    font-size: 18pt;
+    width: fit-content;
+    margin: auto;
+    padding-top: 10px;
+}
